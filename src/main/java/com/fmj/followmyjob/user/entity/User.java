@@ -1,13 +1,19 @@
 package com.fmj.followmyjob.user.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
 @Table( name = "users" )
 public class User {
@@ -28,12 +34,4 @@ public class User {
 			nullable = false
 	)
 	private String password;
-	
-	public User() {}
-	
-	public User(Long id, String email, String password) {
-		this.id = id;
-		this.email = email;
-		this.password = password;
-	}
 }
