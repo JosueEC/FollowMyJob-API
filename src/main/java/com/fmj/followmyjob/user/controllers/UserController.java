@@ -1,7 +1,7 @@
 package com.fmj.followmyjob.user.controllers;
 
-import com.fmj.followmyjob.user.models.User;
-import com.fmj.followmyjob.user.services.UserService;
+import com.fmj.followmyjob.user.entity.User;
+import com.fmj.followmyjob.user.services.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
