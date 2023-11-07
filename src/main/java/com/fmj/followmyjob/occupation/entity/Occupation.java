@@ -1,9 +1,9 @@
-package com.fmj.followmyjob.profile.entity;
-
-import java.util.UUID;
+package com.fmj.followmyjob.occupation.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -15,12 +15,13 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity( name = "profile" )
-@Table( name = "profile" )
-public class Profile {
+@Entity( name = "occupation" )
+@Table( name = "occupation" )
+public class Occupation {
 
     @Id
-    private UUID id;
+    @GeneratedValue( strategy = GenerationType.IDENTITY )
+    private Long id;
 
     @Column(
         name = "name",
@@ -28,10 +29,4 @@ public class Profile {
         unique = true
     )
     private String name;
-
-    @Column(
-        name = "profession",
-        nullable = false
-    )
-    private String profession;
 }

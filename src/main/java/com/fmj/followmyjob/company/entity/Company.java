@@ -1,4 +1,4 @@
-package com.fmj.followmyjob.profile.entity;
+package com.fmj.followmyjob.company.entity;
 
 import java.util.UUID;
 
@@ -15,23 +15,16 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity( name = "profile" )
-@Table( name = "profile" )
-public class Profile {
+@Entity( name = "company" )
+@Table( name = "company" )
+public class Company {
 
     @Id
     private UUID id;
 
     @Column(
         name = "name",
-        nullable = false,
-        unique = true
-    )
-    private String name;
-
-    @Column(
-        name = "profession",
         nullable = false
     )
-    private String profession;
+    private String name;
 }
